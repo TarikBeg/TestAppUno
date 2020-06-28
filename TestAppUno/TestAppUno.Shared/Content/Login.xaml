@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="TestAppUno.Shared.Content.Login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x1="clr-namespace:System;assembly=mscorlib"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="Gray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="300"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
+            <TextBlock Text="Welcome to Test uno app" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"></TextBlock>
+        </StackPanel>
+        <Canvas HorizontalAlignment="Stretch" Height="300" Width="400" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3">
+
+            <Frame Background="White"
+                       CornerRadius="10" Margin="0, 5, 0, 5"
+                       >
+                <StackPanel Margin="0, 30">
+                    <TextBlock Text="Sign in"></TextBlock>
+                    <TextBox PlaceholderText="User name" Width="100" x:Name="name" Background="Gray" Text="{Binding UserName, Mode=TwoWay , UpdateSourceTrigger=PropertyChanged}"/>
+                    <PasswordBox PlaceholderText="Password" Width="100" x:Name="password"  Password="{Binding Password, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Button Content="Sign in" Click="Button_OnClicked"></Button>
+                </StackPanel>
+            </Frame>
+            <Frame   Padding="0,0,0,0" Background="Transparent"
+                    VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Image Source="infinityLogo.png" VerticalAlignment="Center" Grid.Row="0" Grid.RowSpan="2"></Image>
+            </Frame>
+        </Canvas>
+    </Grid>
+</Page>

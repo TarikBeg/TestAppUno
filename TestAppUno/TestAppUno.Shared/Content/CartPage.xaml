@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="TestAppUno.Shared.Content.CartPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TestAppUno.Shared.Content"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+      <StackPanel>
+        <TextBlock Text="This is currently in your cart" FontSize="25"></TextBlock>
+        <ListView x:Name="listView" Height="100"  ItemsSource="{Binding CartItems}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel HorizontalAlignment="Stretch" Orientation="Horizontal">
+                        <Image Width="100" Height="100" Source="{Binding Burger.ImagePath}" />
+                            <StackPanel Padding="5,0,0,0" VerticalAlignment="Stretch" Orientation="Vertical">
+                                <TextBlock Text="{Binding Burger.Name}" FontSize="20" VerticalAlignment="Center"/>
+                                <TextBlock Text="{Binding Burger.ShortDescription}" FontSize="16" VerticalAlignment="Center"  />
+                            </StackPanel>
+                        </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackPanel>
+</Page>

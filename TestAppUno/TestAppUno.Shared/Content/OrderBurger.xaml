@@ -1,0 +1,109 @@
+﻿<Page
+    x:Class="TestAppUno.Shared.Content.OrderBurger"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TestAppUno.Shared.Content"
+    xmlns:models="using:TestAppUno.Model"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:emit="using:System.Reflection.Emit"
+    xmlns:model="clr-namespace:TestAppUno.Model"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <!--<StackPanel>
+        <TextBlock Text="Select your burgers!" FontSize="25"></TextBlock>
+        <ListView  x:Name="listView" Height="100" ItemsSource="{Binding BurgerGroups}" Background="White" Foreground="Black">
+            -->
+    <!--<ListView.Behaviors>
+                <utility1:EventToCommandBehavior EventName="ItemSelected" Command="{Binding BurgerSelectedCommand}" Converter="{StaticResource localSelectedItemEventArgsToSelectedItemConverter}" />
+            </ListView.Behaviors>-->
+    <!--
+            <ListView.HeaderTemplate>
+                <DataTemplate>
+                    <StackPanel Padding="5,0,0,0" VerticalAlignment="Top" Orientation="Horizontal" Background="White" Foreground="Black">
+                        <TextBlock Text="{Binding Title}" VerticalAlignment="Center" FontSize="22" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.HeaderTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel HorizontalAlignment="Stretch" Orientation="Horizontal">
+                        -->
+    <!--<Image Width="100" Height="100" Source="{Binding ImagePath}" />-->
+    <!--<StackPanel Padding="5,0,0,0" VerticalAlignment="Stretch" Orientation="Vertical" Background="White" Foreground="Black">-->
+    <!--<TextBlock Text="{Binding Name}" FontSize="20" VerticalAlignment="Center" />-->
+    <!--
+                            <TextBlock Text="{Binding ShortDescription}" FontSize="16" VerticalAlignment="Center"  />
+                        -->
+    <!--</StackPanel>-->
+    <!--
+                    </StackPanel>
+                    -->
+    <!--Sample with ImageCell-->
+    <!--<ImageCell Text="{Binding Name}" Detail="{Binding ShortDescription}" ImageSource="{Binding ImagePath}" />-->
+    <!--
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackPanel>-->
+
+    <!-- 
+
+    ListView 
+
+    Represents a control that displays data items in a vertical stack.
+
+    Link: https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView
+
+-->
+
+    <StackPanel VerticalAlignment="Center"
+            HorizontalAlignment="Center">
+        <Button Click="Button_Click" Content="sad"></Button>
+        <TextBlock Text="Select your burgers!" FontSize="25"></TextBlock>
+        <!-- Item source is where we will get the data to populate the list -->
+        <ListView  ItemsSource="{Binding Burgers}"  x:Name="listView" SelectionChanged="ListView_OnSelectionChanged">
+            <ListView.Header>
+                <StackPanel Padding="30,30,30,0">
+                    <TextBlock Text="Burgers" FontSize="20"/>
+                </StackPanel>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+
+                    <StackPanel Orientation="Horizontal" 
+                            Height="150">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding ImagePath}" VerticalAlignment="Center" Width="100"></Image>
+                            <!-- Info -->
+                            <StackPanel Orientation="Vertical"
+                                VerticalAlignment="Center"
+                                Margin="60,0,0,0"
+                                Grid.Column="2">
+                                <TextBlock Height="48"
+                                           Width="48"
+                                           Text="{Binding Title}"
+                                           VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                                <!-- Composition Name -->
+                                <TextBlock Text="{Binding Name}"
+                                   Style="{ThemeResource BaseTextBlockStyle}"
+                                   Foreground="{ThemeResource SystemControlPageTextBaseHighBrush}" FontWeight="Bold"/>
+
+                                <!-- Artist Name -->
+                                <TextBlock Text="{Binding ShortDescription}"
+                                   Style="{ThemeResource BodyTextBlockStyle}"
+                                   Foreground="{ThemeResource SystemControlPageTextBaseMediumBrush}"/>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel >
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackPanel>
+</Page>
