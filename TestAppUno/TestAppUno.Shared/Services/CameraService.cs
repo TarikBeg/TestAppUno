@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using GalaSoft.MvvmLight.Ioc;
 using JoesBurgerStore.Contracts;
 using TestXamarinApp.Contracts;
 using XLabs.Ioc;
@@ -25,6 +26,7 @@ namespace JoesBurgerStore.Services
         //private ImageSource _imageSource;
 
         private string _status;
+        public static SimpleIoc ServiceProvider { get; } = SimpleIoc.Default;
 
         /// <summary>
         /// Setups this instance.
@@ -37,15 +39,15 @@ namespace JoesBurgerStore.Services
             }
 
             var device = Resolver.Resolve<IDevice>();
-            _mediaPicker = DependencyService.Get<IMediaPicker>() ?? device.MediaPicker;
+            _mediaPicker = ServiceProvider.GetInstance<IMediaPicker>() ?? device.MediaPicker;
             ////RM: hack for working on windows phone? 
         }
 
         /// <summary>
-      kes the picture.
+      //kes the picture.
         /// </summary>
    
-        <returns>Take Picture Task.</returns>
+       // <returns>Take Picture Task.</returns>
         public async Task<MediaFile> TakePicture()
         {
             Setup();
