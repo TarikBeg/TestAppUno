@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using GalaSoft.MvvmLight.Ioc;
 using JoesBurgerStore.Contracts;
 using TestXamarinApp.Contracts;
@@ -38,16 +39,24 @@ namespace JoesBurgerStore.Services
                 return;
             }
 
-            var device = Resolver.Resolve<IDevice>();
-            _mediaPicker = ServiceProvider.GetInstance<IMediaPicker>() ?? device.MediaPicker;
+            try
+            {
+                var device = Resolver.Resolve<IDevice>();
+                _mediaPicker = ServiceProvider.GetInstance<IMediaPicker>() ?? device.MediaPicker;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
             ////RM: hack for working on windows phone? 
         }
 
         /// <summary>
-      //kes the picture.
+        //kes the picture.
         /// </summary>
-   
-       // <returns>Take Picture Task.</returns>
+
+        // <returns>Take Picture Task.</returns>
         public async Task<MediaFile> TakePicture()
         {
             Setup();
