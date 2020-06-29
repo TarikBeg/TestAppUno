@@ -23,5 +23,8 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
+          <Button Content="Main Page" Click="Button_OnClicked" Width="200"  Margin="0,20,0,0" Foreground="White" Background="Gray" Padding="3"
+                    HorizontalAlignment="Stretch" VerticalAlignment="Center" CornerRadius="10"></Button>
     </StackPanel>
 </Page>

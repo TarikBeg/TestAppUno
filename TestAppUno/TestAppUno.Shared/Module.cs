@@ -1,8 +1,10 @@
 ﻿using GalaSoft.MvvmLight.Ioc;
 using JoesBurgerStore.Services;
-using JoesBurgerStore.ViewModels;
+
+/* Unmerged change from project 'TestAppUno.macOS'
+Before:
+using TestAppUno.Contracts;*/
 using TestAppUno.Contracts;
-using TestAppUno.Contracts.ViewModels;
 using TestAppUno.Models;
 using TestAppUno.Services;
 using TestXamarinApp.Contracts;
