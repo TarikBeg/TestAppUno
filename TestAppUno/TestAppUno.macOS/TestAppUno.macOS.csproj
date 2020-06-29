@@ -87,6 +87,15 @@
     <PackageReference Include="Uno.UI" Version="2.4.4" />
     <PackageReference Include="Uno.UI.RemoteControl" Version="2.4.4" Condition="'$(Configuration)'=='Debug'" />
     <PackageReference Include="Microsoft.Extensions.Logging.Filter" Version="1.1.2" />
+    <PackageReference Include="XLabs.Core">
+      <Version>2.0.5782</Version>
+    </PackageReference>
+    <PackageReference Include="XLabs.IoC">
+      <Version>2.0.5782</Version>
+    </PackageReference>
+    <PackageReference Include="XLabs.Platform">
+      <Version>2.0.5782</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="..\TestAppUno.Shared\TestAppUno.Shared.projitems" Label="Shared" Condition="Exists('..\TestAppUno.Shared\TestAppUno.Shared.projitems')" />
   <ItemGroup>

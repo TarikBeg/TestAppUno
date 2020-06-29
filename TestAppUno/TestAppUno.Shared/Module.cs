@@ -1,7 +1,9 @@
 ﻿using GalaSoft.MvvmLight.Ioc;
+using JoesBurgerStore.Services;
 using TestAppUno.Contracts;
 using TestAppUno.Models;
 using TestAppUno.Services;
+using TestXamarinApp.Contracts;
 
 namespace TestAppUno.Shared
 {
@@ -12,6 +14,7 @@ namespace TestAppUno.Shared
             serviceProvider.Register<IBurgerDataService>(() => new BurgerDataService());
             serviceProvider.Register<IDataStore<Item>>(() => new MockDataStore());
             serviceProvider.Register<ICartDataService>(() => new CartDataService());
+            serviceProvider.Register<ICameraService>(() => new CameraService());
         }
     }
 }

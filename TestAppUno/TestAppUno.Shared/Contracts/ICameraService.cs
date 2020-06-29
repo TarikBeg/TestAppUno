@@ -1,10 +1,10 @@
-﻿//using System.Threading.Tasks;
-//using XLabs.Platform.Services.Media;
+﻿using System.Threading.Tasks;
+using XLabs.Platform.Services.Media;
 
-//namespace TestXamarinApp.Contracts
-//{
-//    public interface ICameraService
-//    {
-//        Task<MediaFile> TakePicture();
-//    }
-//}
+namespace TestXamarinApp.Contracts
+{
+    public interface ICameraService
+    {
+        Task<MediaFile> TakePicture();
+    }
+}

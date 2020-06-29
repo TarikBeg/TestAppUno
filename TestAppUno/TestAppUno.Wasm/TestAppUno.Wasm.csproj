@@ -46,6 +46,10 @@
     <PackageReference Include="Uno.UI.RemoteControl" Version="2.4.4" Condition="'$(Configuration)'=='Debug'" />
     <PackageReference Include="Uno.Wasm.Bootstrap" Version="1.2.0" />
     <PackageReference Include="Uno.Wasm.Bootstrap.DevServer" Version="1.2.0" />
+    <PackageReference Include="XLabs.Core" Version="2.0.5782" />
+    <PackageReference Include="XLabs.Forms" Version="2.0.5782" />
+    <PackageReference Include="XLabs.IoC" Version="2.0.5782" />
+    <PackageReference Include="XLabs.Platform" Version="2.0.5782" />
   </ItemGroup>
   <Import Project="..\TestAppUno.Shared\TestAppUno.Shared.projitems" Label="Shared" Condition="Exists('..\TestAppUno.Shared\TestAppUno.Shared.projitems')" />
 </Project>

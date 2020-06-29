@@ -4,6 +4,7 @@ using Windows.Media.Capture;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Imaging;
+using JoesBurgerStore.ViewModels;
 
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -18,32 +19,8 @@ namespace TestAppUno.Shared.Content
         public TakePicture()
         {
             this.InitializeComponent();
+
+            this.DataContext = new TakePictureViewModel();
         }
-
-        public async void button_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                var captureUI = new CameraCaptureUI();
-                captureUI.PhotoSettings.Format = CameraCaptureUIPhotoFormat.Jpeg;
-                captureUI.PhotoSettings.CroppedSizeInPixels = new Size(200, 200);
-
-                var photo = await captureUI.CaptureFileAsync(CameraCaptureUIMode.Photo);
-
-                if (photo == null)
-                {
-                    return;
-                }
-                else
-                {
-                    var source = new BitmapImage(new Uri(photo.Path));
-                    image.Source = source;
-                }
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.WriteLine(ex);
-            }
-        }
-	}
+    }
 }

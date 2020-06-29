@@ -9,14 +9,8 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel Padding="50">
-            <Button x:Name="button"
-                    Content="Capture Image"
-                    Width="150"
-                    Height="30"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Click="button_Click" />
-            <Image x:Name="image" />
+            <Button Content="Take Picture" Command="{Binding TakePictureCommand}" />
+            <Image x:Name="TakePictureImage" VerticalAlignment="Center" />
         </StackPanel>
     </Grid>
 </Page>

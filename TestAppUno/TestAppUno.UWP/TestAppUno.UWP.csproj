@@ -24,6 +24,18 @@
       <Version>1.6.2</Version>
     </PackageReference>
     <PackageReference Include="Uno.Core" Version="2.0.0" />
+    <PackageReference Include="XLabs.Core">
+      <Version>2.0.5782</Version>
+    </PackageReference>
+    <PackageReference Include="XLabs.Forms">
+      <Version>2.0.5782</Version>
+    </PackageReference>
+    <PackageReference Include="XLabs.IoC">
+      <Version>2.0.5782</Version>
+    </PackageReference>
+    <PackageReference Include="XLabs.Platform">
+      <Version>2.0.5782</Version>
+    </PackageReference>
   </ItemGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>

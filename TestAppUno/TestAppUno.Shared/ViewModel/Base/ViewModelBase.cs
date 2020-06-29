@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using TestAppUno.Contracts;
 using TestAppUno.Models;
 using TestAppUno.Services;
+using TestXamarinApp.Contracts;
 
 namespace TestAppUno.ViewModels.Base
 {
@@ -16,6 +17,7 @@ namespace TestAppUno.ViewModels.Base
         public IDataStore<Item> DataStore => ServiceProvider.GetInstance<IDataStore<Item>>();
         public IBurgerDataService BurgerDataService => ServiceProvider.GetInstance<IBurgerDataService>();
         public ICartDataService CartDataService => ServiceProvider.GetInstance<ICartDataService>();
+        public ICameraService CameraService => ServiceProvider.GetInstance<ICameraService>();
 
         public event PropertyChangedEventHandler PropertyChanged;
 

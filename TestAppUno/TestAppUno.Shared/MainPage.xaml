@@ -13,11 +13,6 @@
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <TextBlock Text="Welcome to test uno app" FontSize="25"></TextBlock>
-        <StackPanel VerticalAlignment="Stretch" Grid.Row="1" Grid.RowSpan="2">
-            <Button Content="Order burgers" Click="ButtonBase_OnClick"></Button>
-            <Button Content="View Cart" Click="ButtonBase_OnClick1"></Button>
-            <Button Content="Take picture" Click="ButtonBase_OnClick3"></Button>
-            <!--<Button Content="View map" Click="ButtonBase_OnClick2"></Button>-->
         <TextBlock Text="Welcome to test uno app" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" ></TextBlock>
         <StackPanel CornerRadius="10" Background="White" VerticalAlignment="Stretch" Grid.Row="1" Grid.RowSpan="2" Width="500">
             <Button Content="Order burgers" Foreground="White" Padding="3" Background="Gray" Click="ButtonBase_OnClick"
