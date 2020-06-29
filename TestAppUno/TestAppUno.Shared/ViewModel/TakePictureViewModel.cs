@@ -6,7 +6,7 @@ using Windows.UI.Xaml.Media;
 
 namespace JoesBurgerStore.ViewModels
 {
-    public class TakePictureViewModel : ViewModelBase, ITakePictureViewModel
+    public class TakePictureViewModel : ViewModelBase
     {
 
         public ICommand TakePictureCommand { get; set; }
@@ -36,6 +36,7 @@ namespace JoesBurgerStore.ViewModels
             TakePictureCommand = new Command(async () =>
             {
                 var mediaFile = await CameraService.TakePicture();
+              
             });
         }
     }
