@@ -30,5 +30,10 @@ namespace TestAppUno
         {
             Frame.Navigate(typeof(ShowMapPage));
         }
+
+        private void ButtonBase_OnClick3(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(TakePicture));
+        }
     }
 }

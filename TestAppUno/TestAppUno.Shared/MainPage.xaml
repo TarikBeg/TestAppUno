@@ -16,7 +16,7 @@
         <StackPanel VerticalAlignment="Stretch" Grid.Row="1" Grid.RowSpan="2">
             <Button Content="Order burgers" Click="ButtonBase_OnClick"></Button>
             <Button Content="View Cart" Click="ButtonBase_OnClick1"></Button>
-            <!--<Button Content="Take picture" Command="{Binding TakePictureCommand}"></Button>-->
+            <Button Content="Take picture" Click="ButtonBase_OnClick3"></Button>
             <!--<Button Content="View map" Click="ButtonBase_OnClick2"></Button>-->
             <Button Content="About Joe's Burgers" Command="{Binding AboutCommand}"></Button>
         </StackPanel>

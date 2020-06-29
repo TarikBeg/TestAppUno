@@ -37,6 +37,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Content\ShowMapPage.xaml.cs">
       <DependentUpon>ShowMapPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Content\TakePicture.xaml.cs">
+      <DependentUpon>TakePicture.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Contracts\IBurgerDataService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Contracts\ICameraService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Contracts\ICartDataService.cs" />
@@ -99,6 +102,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="$(MSBuildThisFileDirectory)Content\ShowMapPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Content\TakePicture.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
