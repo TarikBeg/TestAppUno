@@ -8,6 +8,9 @@ using TestAppUno.Contracts;
 using TestAppUno.Models;
 using TestAppUno.Services;
 using TestXamarinApp.Contracts;
+using XLabs.Ioc;
+using XLabs.Platform.Device;
+using XLabs.Platform.Services;
 
 namespace TestAppUno.Shared
 {
@@ -19,6 +22,13 @@ namespace TestAppUno.Shared
             serviceProvider.Register<IDataStore<Item>>(() => new MockDataStore());
             serviceProvider.Register<ICartDataService>(() => new CartDataService());
             serviceProvider.Register<ICameraService>(() => new CameraService());
+
+
+            var container = new SimpleContainer();
+            container.Register<IDisplay>(t => t.Resolve<IDevice>().Display);
+            container.Register<INetwork>(t => t.Resolve<IDevice>().Network);
+
+            Resolver.SetResolver(container.GetResolver());
         }
     }
 }
