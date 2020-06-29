@@ -20,24 +20,27 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
-            <TextBlock Text="Welcome to Test uno app" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"></TextBlock>
+            <!--<TextBlock Text="Welcome to Test uno app" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"></TextBlock>-->
+            <Frame   Padding="0,0,0,0" Background="Transparent"
+                    VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,100, 0,0">
+              <Image Source="https://www.infinitymesh.com/resources/infinitymesh-logo.png" VerticalAlignment="Center" Width="150"></Image>
+            </Frame>  
         </StackPanel>
-        <Canvas HorizontalAlignment="Stretch" Height="300" Width="400" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3">
-
+        <Canvas HorizontalAlignment="Center" Height="500" Width="500" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+ 
             <Frame Background="White"
-                       CornerRadius="10" Margin="0, 5, 0, 5"
-                       >
-                <StackPanel Margin="0, 30">
-                    <TextBlock Text="Sign in"></TextBlock>
-                    <TextBox PlaceholderText="User name" Width="100" x:Name="name" Background="Gray" Text="{Binding UserName, Mode=TwoWay , UpdateSourceTrigger=PropertyChanged}"/>
-                    <PasswordBox PlaceholderText="Password" Width="100" x:Name="password"  Password="{Binding Password, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
-                    <Button Content="Sign in" Click="Button_OnClicked"></Button>
+                       CornerRadius="10"
+                       HorizontalAlignment="Center" VerticalAlignment="Center" Width="500"
+                   Height="500">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,120,0,0">
+                    <TextBox PlaceholderText="User name" Width="300" x:Name="name" Background="Gray"
+                             Text="{Binding UserName, Mode=TwoWay , UpdateSourceTrigger=PropertyChanged}" Foreground="Black"/>
+                    <PasswordBox PlaceholderText="Password" Width="300" x:Name="password"
+                             Margin="0,10,0,0"  Foreground="Black"  Password="{Binding Password, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Button   Margin="0,10,0,0"  Content="Sign in" Width="300" Background="Gray" Click="Button_OnClicked"></Button>
                 </StackPanel>
             </Frame>
-            <Frame   Padding="0,0,0,0" Background="Transparent"
-                    VerticalAlignment="Center" HorizontalAlignment="Center">
-                <Image Source="infinityLogo.png" VerticalAlignment="Center" Grid.Row="0" Grid.RowSpan="2"></Image>
-            </Frame>
+         
         </Canvas>
     </Grid>
 </Page>

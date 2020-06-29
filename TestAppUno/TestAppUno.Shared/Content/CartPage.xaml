@@ -14,10 +14,10 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel HorizontalAlignment="Stretch" Orientation="Horizontal">
-                        <Image Width="100" Height="100" Source="{Binding Burger.ImagePath}" />
+                        <Image Width="400" Height="100" Source="{Binding Burger.ImagePath}" />
                             <StackPanel Padding="5,0,0,0" VerticalAlignment="Stretch" Orientation="Vertical">
-                                <TextBlock Text="{Binding Burger.Name}" FontSize="20" VerticalAlignment="Center"/>
-                                <TextBlock Text="{Binding Burger.ShortDescription}" FontSize="16" VerticalAlignment="Center"  />
+                                <TextBlock Text="{Binding Burger.Name}" FontSize="40" VerticalAlignment="Center" Foreground="Black"/>
+                                <TextBlock Text="{Binding Burger.ShortDescription}" FontSize="30" VerticalAlignment="Center" Foreground="Black" />
                             </StackPanel>
                         </StackPanel>
                 </DataTemplate>
