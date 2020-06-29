@@ -17,7 +17,6 @@ namespace TestAppUno.Shared
             serviceProvider.Register<IDataStore<Item>>(() => new MockDataStore());
             serviceProvider.Register<ICartDataService>(() => new CartDataService());
             serviceProvider.Register<ICameraService>(() => new CameraService());
-            serviceProvider.Register<ITakePictureViewModel>(() => new TakePictureViewModel());
         }
     }
 }

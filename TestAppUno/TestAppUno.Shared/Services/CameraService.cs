@@ -37,14 +37,15 @@ namespace JoesBurgerStore.Services
             }
 
             var device = Resolver.Resolve<IDevice>();
-
+            _mediaPicker = DependencyService.Get<IMediaPicker>() ?? device.MediaPicker;
             ////RM: hack for working on windows phone? 
         }
 
         /// <summary>
-        /// Takes the picture.
+      kes the picture.
         /// </summary>
-        /// <returns>Take Picture Task.</returns>
+   
+        <returns>Take Picture Task.</returns>
         public async Task<MediaFile> TakePicture()
         {
             Setup();
