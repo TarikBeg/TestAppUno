@@ -35,5 +35,10 @@ namespace TestAppUno
         {
             Frame.Navigate(typeof(TakePicture));
         }
+        
+        private void ButtonBase_OnClick4(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(CalculatorPage));
+        }
     }
 }
