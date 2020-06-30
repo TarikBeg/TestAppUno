@@ -29,5 +29,10 @@ namespace TestAppUno.Shared.Content
 
             this.DataContext = new CartViewModel();
         }
+
+        private void Button_OnClicked(object sender, EventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage), true);
+        }
     }
 }

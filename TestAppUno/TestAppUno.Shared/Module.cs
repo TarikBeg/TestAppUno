@@ -1,14 +1,17 @@
 ﻿using GalaSoft.MvvmLight.Ioc;
 using JoesBurgerStore.Services;
-using JoesBurgerStore.ViewModels;
+
+/* Unmerged change from project 'TestAppUno.macOS'
+Before:
+using TestAppUno.Contracts;*/
 using TestAppUno.Contracts;
-using TestAppUno.Contracts.ViewModels;
 using TestAppUno.Models;
 using TestAppUno.Services;
 using TestXamarinApp.Contracts;
 using XLabs.Ioc;
 using XLabs.Platform.Device;
 using XLabs.Platform.Services;
+using XLabs.Platform.Services.Media;
 
 namespace TestAppUno.Shared
 {
@@ -27,6 +30,8 @@ namespace TestAppUno.Shared
             container.Register<INetwork>(t => t.Resolve<IDevice>().Network);
 
             Resolver.SetResolver(container.GetResolver());
+
+            //serviceProvider.Register<IMediaPicker>(() => new MediaFile());
         }
     }
 }

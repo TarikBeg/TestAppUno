@@ -42,7 +42,7 @@ namespace JoesBurgerStore.Services
             try
             {
                 var device = Resolver.Resolve<IDevice>();
-                _mediaPicker = ServiceProvider.GetInstance<IMediaPicker>() ?? device.MediaPicker;
+                _mediaPicker = device.MediaPicker;
             }
             catch (Exception e)
             {
