@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="TestAppUno.Shared.Content.AboutPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TestAppUno.Shared.Content"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <TextBox Text="The Joe's Burger Store App!" FontSize="25"></TextBox>
+        <TextBox Text="{Binding General}"></TextBox>
+        <TextBox Text="{Binding Copyright}"></TextBox>
+        <!--<controls:HyperLinkLabel Text="{Binding MoreInfo}" NavigateUri="{Binding Link}"></controls:HyperLinkLabel>-->
+        <Button Content="{Binding MoreInfo}" Command="{Binding MoreInfoCommand}"/>
+    </StackPanel>
+</Page>

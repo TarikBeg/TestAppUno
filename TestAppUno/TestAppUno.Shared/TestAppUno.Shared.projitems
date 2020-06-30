@@ -19,6 +19,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Content\AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Content\BurgerDetail.xaml.cs">
       <DependentUpon>BurgerDetail.xaml</DependentUpon>
     </Compile>
@@ -44,6 +47,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Contracts\ICameraService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Contracts\ICartDataService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Contracts\IMapService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\AboutViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Contracts\ViewModels\IAboutViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Contracts\ViewModels\IBurgerDetailViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Contracts\ViewModels\ICartViewModel.cs" />
@@ -82,6 +86,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\TakePictureViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Content\AboutPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="$(MSBuildThisFileDirectory)Content\BurgerDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
