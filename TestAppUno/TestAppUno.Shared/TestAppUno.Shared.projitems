@@ -80,6 +80,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\CartViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\OrderBurgersViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\TakePictureViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MediaPicker.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="$(MSBuildThisFileDirectory)Content\BurgerDetail.xaml">
